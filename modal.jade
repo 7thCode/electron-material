@@ -3,21 +3,20 @@ html
   head
     meta(charset='UTF-8')
     title Hello World!
-  body
-    h1 もーだる！
-    // All of the Node.js APIs are available in this renderer process.
-    | We are using node
-    script.
-      document.write(process.versions.node)
-    | ,
-    |     Chromium
-    script.
-      document.write(process.versions.chrome)
-    | ,
-    |     and Electron
-    script.
-      document.write(process.versions.electron)
-    | .
-  script.
-    // You can also require other files to run in this process
-    require('./renderer.js')
+    link(rel="stylesheet", type="text/css", href="bower_components/angular-material/angular-material.min.css")
+  body.flexbox
+    md-content.background
+      md-card.box-edge
+        md-card-content
+          h1 Modal!
+
+  script(type="text/javascript", src="bower_components/lodash/dist/lodash.min.js")
+  script(type="text/javascript", src="bower_components/jquery/dist/jquery.min.js")
+  script(type="text/javascript", src="bower_components/angular/angular.min.js")
+  script(type="text/javascript", src="bower_components/angular-animate/angular-animate.min.js")
+  script(type="text/javascript", src="bower_components/angular-messages/angular-messages.min.js")
+  script(type="text/javascript", src="bower_components/angular-aria/angular-aria.min.js")
+  script(type="text/javascript", src="bower_components/angular-resource/angular-resource.min.js")
+  script(type="text/javascript", src="bower_components/angular-material/angular-material.min.js")
+  script(type="text/javascript", src="bower_components/angular-material-icons/angular-material-icons.min.js")
+  script(type="text/javascript", src="renderer.js")

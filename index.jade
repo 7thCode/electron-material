@@ -5,22 +5,15 @@ html
     title Hello World!
     link(rel="stylesheet", type="text/css", href="bower_components/angular-material/angular-material.min.css")
   body.flexbox(ng-app="Application")
-    md-content(ng-controller="Controller")
-      h1 やっほー！
-      md-button.md-raised.md-primary(ng-click="modal();") hoge
-      // All of the Node.js APIs are available in this renderer process.
-      | We are using node
-      script.
-        document.write(process.versions.node)
-      | ,
-      |     Chromium
-      script.
-        document.write(process.versions.chrome)
-      | ,
-      |     and Electron
-      script.
-        document.write(process.versions.electron)
-      | .
+    md-content.background(ng-controller="Controller")
+      md-card.box-edge
+        md-card-content
+            md-tabs(md-dynamic-height md-border-bottom)
+              md-tab(label="form")
+                md-content(class="md-padding")
+                  h1 Hello!
+                  md-button.md-raised.md-primary(ng-click="modal();") Open Modal
+
   script(type="text/javascript", src="bower_components/lodash/dist/lodash.min.js")
   script(type="text/javascript", src="bower_components/jquery/dist/jquery.min.js")
   script(type="text/javascript", src="bower_components/angular/angular.min.js")
