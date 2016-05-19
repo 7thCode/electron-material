@@ -2,7 +2,7 @@
  * Created by oda on 2016/05/19.
  */
 
-/// <reference path="typings/main.d.ts" />
+/// <reference path="../typings/main.d.ts" />
 
 "use strict";
 
