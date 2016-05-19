@@ -13,7 +13,12 @@ html
               md-tab(label="form")
                 md-content(class="md-padding")
                   h1 Hello!
-                  md-button.md-raised.md-primary(ng-click="modal();") Open Modal
+                  .row
+                    md-button.md-raised.md-primary(ng-click="modal();") Open Modaless
+                  .row
+                    md-input-container
+                      lavel Text
+                      input(type='text', ng-model='hoge')
 
   script(type="text/javascript", src="./bower_components/lodash/dist/lodash.min.js")
   script(type="text/javascript", src="./bower_components/jquery/dist/jquery.min.js")

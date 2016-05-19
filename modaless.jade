@@ -2,13 +2,19 @@ doctype html
 html
   head
     meta(charset='UTF-8')
-    title Hello World!
+    title Modaless!
     link(rel="stylesheet", type="text/css", href="bower_components/angular-material/angular-material.min.css")
   body.flexbox(ng-app="Application")
     md-content.background(ng-controller="Controller")
       md-card.box-edge
         md-card-content
-          h1 Modal!
+          h1 Modaless!
+          .row
+            md-button.md-raised.md-primary(ng-click="button();") Hai!
+          .row
+            md-input-container
+              lavel Text
+              input(type='text', ng-model='field')
 
   script(type="text/javascript", src="./bower_components/lodash/dist/lodash.min.js")
   script(type="text/javascript", src="./bower_components/jquery/dist/jquery.min.js")
@@ -19,4 +25,4 @@ html
   script(type="text/javascript", src="./bower_components/angular-resource/angular-resource.min.js")
   script(type="text/javascript", src="./bower_components/angular-material/angular-material.min.js")
   script(type="text/javascript", src="./bower_components/angular-material-icons/angular-material-icons.min.js")
-  script(type="text/javascript", src="./javascripts/modal.js")
+  script(type="text/javascript", src="./javascripts/modaless.js")

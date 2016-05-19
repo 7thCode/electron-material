@@ -9,7 +9,7 @@ var app = angular.module('Application', ["ngResource", 'ngMessages', 'ngAnimate'
 app.controller('Controller', ["$scope",
     function ($scope) {
         $scope.modal = function () {
-            var modalPath = path.join('file://', __dirname, 'modal.html');
+            var modalPath = path.join('file://', __dirname, 'modaless.html');
             var win = new BrowserWindow({ width: 400, height: 320 });
             win.on('closed', function () { win = null; });
             win.loadURL(modalPath);

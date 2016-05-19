@@ -3,10 +3,11 @@
 // All of the Node.js APIs are available in this process.
 /// <reference path="../typings/main.d.ts" />
 "use strict";
-var BrowserWindow = require('electron').remote.BrowserWindow;
-var path = require('path');
 var app = angular.module('Application', ["ngResource", 'ngMessages', 'ngAnimate', 'ngMaterial', 'ngMdIcons']);
 app.controller('Controller', ["$scope",
     function ($scope) {
+        $scope.button = function () {
+            $scope.field = "Hey!";
+        };
     }]);
-//# sourceMappingURL=modal.js.map
+//# sourceMappingURL=modaless.js.map

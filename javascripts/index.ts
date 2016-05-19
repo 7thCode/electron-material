@@ -13,13 +13,13 @@ var app:any = angular.module('Application', ["ngResource", 'ngMessages', 'ngAnim
 
 app.controller('Controller', ["$scope",
     ($scope:any):void => {
-        
+
         $scope.modal = () => {
-            const modalPath = path.join('file://', __dirname, 'modal.html');
+            const modalPath = path.join('file://', __dirname, 'modaless.html');
             let win = new BrowserWindow({ width: 400, height: 320 });
             win.on('closed', function () { win = null });
             win.loadURL(modalPath);
             win.show();
         }
-        
+
     }]);
