@@ -11,15 +11,18 @@ const path = require('path');
 
 var app:any = angular.module('Application', ["ngResource", 'ngMessages', 'ngAnimate', 'ngMaterial', 'ngMdIcons']);
 
-app.controller('Controller', ["$scope",
-    ($scope:any):void => {
+app.controller('Controller', ["$scope", ($scope:any):void => {
 
-        $scope.modal = () => {
-            const modalPath = path.join('file://', __dirname, 'modaless.html');
-            let win = new BrowserWindow({ width: 400, height: 320 });
-            win.on('closed', function () { win = null });
-            win.loadURL(modalPath);
-            win.show();
-        }
+    $scope.modal = () => {
+        const modalessPath = path.join('file://', __dirname, 'modaless.html');
+        let modaless_window = new BrowserWindow({width: 400, height: 320});
 
-    }]);
+        modaless_window.on('closed', function () {
+            modaless_window = null
+        });
+
+        modaless_window.loadURL(modalessPath);
+        modaless_window.show();
+    }
+
+}]);

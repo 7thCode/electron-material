@@ -2,6 +2,9 @@
 // be executed in the renderer process for that window.
 // All of the Node.js APIs are available in this process.
 
+// Modaless、Main側のangularとは独立。
+// 連携するなら通信/ファイル経由
+
 /// <reference path="../typings/main.d.ts" />
 
 "use strict";
@@ -10,8 +13,8 @@ var app:any = angular.module('Application', ["ngResource", 'ngMessages', 'ngAnim
 
 app.controller('Controller', ["$scope", ($scope:any):void => {
 
-        $scope.button = () => {
-            $scope.field = "Hey!";
-        };
-
-    }]);
+    $scope.button = () => {
+        $scope.field = "Hey!";
+    };
+    
+}]);

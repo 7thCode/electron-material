@@ -6,14 +6,15 @@
 var BrowserWindow = require('electron').remote.BrowserWindow;
 var path = require('path');
 var app = angular.module('Application', ["ngResource", 'ngMessages', 'ngAnimate', 'ngMaterial', 'ngMdIcons']);
-app.controller('Controller', ["$scope",
-    function ($scope) {
+app.controller('Controller', ["$scope", function ($scope) {
         $scope.modal = function () {
-            var modalPath = path.join('file://', __dirname, 'modaless.html');
-            var win = new BrowserWindow({ width: 400, height: 320 });
-            win.on('closed', function () { win = null; });
-            win.loadURL(modalPath);
-            win.show();
+            var modalessPath = path.join('file://', __dirname, 'modaless.html');
+            var modaless_window = new BrowserWindow({ width: 400, height: 320 });
+            modaless_window.on('closed', function () {
+                modaless_window = null;
+            });
+            modaless_window.loadURL(modalessPath);
+            modaless_window.show();
         };
     }]);
 //# sourceMappingURL=index.js.map
