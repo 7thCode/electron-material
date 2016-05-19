@@ -8,8 +8,7 @@
 
 var app:any = angular.module('Application', ["ngResource", 'ngMessages', 'ngAnimate', 'ngMaterial', 'ngMdIcons']);
 
-app.controller('Controller', ["$scope",
-    ($scope:any):void => {
+app.controller('Controller', ["$scope", ($scope:any):void => {
 
         $scope.button = () => {
             $scope.field = "Hey!";

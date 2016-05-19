@@ -4,8 +4,7 @@
 /// <reference path="../typings/main.d.ts" />
 "use strict";
 var app = angular.module('Application', ["ngResource", 'ngMessages', 'ngAnimate', 'ngMaterial', 'ngMdIcons']);
-app.controller('Controller', ["$scope",
-    function ($scope) {
+app.controller('Controller', ["$scope", function ($scope) {
         $scope.button = function () {
             $scope.field = "Hey!";
         };

@@ -1,5 +1,10 @@
 # electron-material
 
+## Description
+
+ElectronでAngularならMaterialにしてみよう、と。
+ならばTypeScriptだろう、と。
+
 ## To Use
 
 ```bash
