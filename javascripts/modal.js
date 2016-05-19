@@ -3,18 +3,10 @@
 // All of the Node.js APIs are available in this process.
 /// <reference path="../typings/main.d.ts" />
 "use strict";
-/*
-const BrowserWindow = require('electron').remote.BrowserWindow;
-const path = require('path');
-
-const newWindowBtn = document.getElementById('new-window');
-
-newWindowBtn.addEventListener('click', function (event) {
-    const modalPath = path.join('file://', __dirname, 'modal.html');
-    let win = new BrowserWindow({ width: 400, height: 320 });
-    win.on('closed', function () { win = null });
-    win.loadURL(modalPath);
-    win.show();
-});
-*/
+var BrowserWindow = require('electron').remote.BrowserWindow;
+var path = require('path');
+var app = angular.module('Application', ["ngResource", 'ngMessages', 'ngAnimate', 'ngMaterial', 'ngMdIcons']);
+app.controller('Controller', ["$scope",
+    function ($scope) {
+    }]);
 //# sourceMappingURL=modal.js.map
