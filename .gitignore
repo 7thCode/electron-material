@@ -1,3 +1,13 @@
 node_modules
 bower_components
 typings
+
+renderer/javascripts/controller.js
+
+index.js
+
+renderer/index.html
+
+renderer/javascripts/application.js
+
+renderer/stylesheets/style.css
