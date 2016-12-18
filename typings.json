@@ -1,9 +1,7 @@
 {
-  "name": "electron-quick-start",
-  "version": false,
+  "name": "material",
   "dependencies": {},
-  "ambientDependencies": {
-    "angular": "registry:dt/angular#1.5.0+20160517064839",
-    "node": "registry:dt/node#6.0.0+20160514165920"
+  "globalDependencies": {
+    "node": "registry:dt/node#6.0.0+20161212163245"
   }
 }

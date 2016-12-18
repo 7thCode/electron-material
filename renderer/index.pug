@@ -1,0 +1,156 @@
+doctype html
+html(lang='ja')
+    head
+        meta(charset='utf-8')
+        meta(name='format-detection', content='telephone=no')
+        meta(name='msapplication-tap-highlight', content='no')
+        meta(http-equiv='X-UA-Compatible', content='IE=edge')
+        meta(http-equiv='Content-Type', content='text/html')
+        meta(name='viewport', content='user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height')
+        title E
+        link(rel='stylesheet', type='text/css', href='./bower_components/angular-material/angular-material.min.css')
+        link(rel='stylesheet', type='text/css', href='./stylesheets/style.css')
+    body
+        div(layout='column', ng-cloak='', ng-app='Application')
+            section(ng-controller='Controller as ctrl')
+                md-toolbar.md-menu-toolbar
+                    md-toolbar-filler(layout='', layout-align='center center')
+                    md-menu-bar
+                        md-menu
+                            button(ng-click='$mdOpenMenu()')
+                                | File
+                            md-menu-content
+                                md-menu-item
+                                    md-button(ng-click="ctrl.sampleAction('New Document', $event)")
+                                        | Share...
+                                md-menu-divider
+                                md-menu-item
+                                    md-menu
+                                        md-button(ng-click='$mdOpenMenu()') New
+                                        md-menu-content
+                                            md-menu-item
+                                                md-button(ng-click="ctrl.sampleAction('New Document', $event)") Document
+                                            md-menu-item
+                                                md-button(ng-click="ctrl.sampleAction('New Spreadsheet', $event)") Spreadsheet
+                                            md-menu-item
+                                                md-button(ng-click="ctrl.sampleAction('New Presentation', $event)") Presentation
+                                            md-menu-item
+                                                md-button(ng-click="ctrl.sampleAction('New Form', $event)") Form
+                                            md-menu-item
+                                                md-button(ng-click="ctrl.sampleAction('New Drawing', $event)") Drawing
+                                md-menu-item
+                                    md-button(ng-click="ctrl.sampleAction('Open', $event)")
+                                        | Open...
+                                        span.md-alt-text  {{ 'M-O' | keyboardShortcut }}
+                                md-menu-item
+                                    md-button(disabled='disabled', ng-click="ctrl.sampleAction('Rename', $event)")
+                                        | Rename
+                                md-menu-divider
+                                md-menu-item
+                                    md-button(ng-click="ctrl.sampleAction('Print', $event)")
+                                        | Print
+                                        span.md-alt-text {{ 'M-P' | keyboardShortcut }}
+                        md-menu
+                            button(ng-click='$mdOpenMenu()')
+                                | Edit
+                            md-menu-content
+                                md-menu-item.md-indent
+                                    md-button(ng-click="ctrl.sampleAction('undo', $event)")
+                                        | Undo
+                                        span.md-alt-text {{ 'M-Z' | keyboardShortcut }}
+                                md-menu-item.md-indent
+                                    md-button(ng-click="ctrl.sampleAction('redo', $event)")
+                                        | Redo
+                                        span.md-alt-text {{ 'M-Y' | keyboardShortcut }}
+                                md-menu-divider
+                                md-menu-item.md-indent
+                                    md-button(ng-click="ctrl.sampleAction('cut', $event)")
+                                        | Cut
+                                        span.md-alt-text {{ 'M-X' | keyboardShortcut }}
+                                md-menu-item.md-indent
+                                    md-button(ng-click="ctrl.sampleAction('copy', $event)")
+                                        | Copy
+                                        span.md-alt-text {{ 'M-C' | keyboardShortcut }}
+                                md-menu-item.md-indent
+                                    md-button(ng-click="ctrl.sampleAction('paste', $event)")
+                                        | Paste
+                                        span.md-alt-text {{ 'M-P' | keyboardShortcut }}
+                                md-menu-divider
+                                md-menu-item.md-indent
+                                    md-button(ng-click="ctrl.sampleAction('Find and replace', $event)")
+                                        | Find and replace...
+                                        span.md-alt-text {{ 'M-S-H' | keyboardShortcut }}
+                        md-menu
+                            button(ng-click='$mdOpenMenu()')
+                                | View
+                            md-menu-content
+                                md-menu-item(type='checkbox', ng-model='ctrl.settings.printLayout') Print layout
+                                md-menu-item.md-indent
+                                    md-menu
+                                        md-button(ng-click='$mdOpenMenu()') Mode
+                                        md-menu-content(width='3')
+                                            md-menu-item(type='radio', ng-model='ctrl.settings.presentationMode', value="'presentation'") Presentation
+                                            md-menu-item(type='radio', ng-model='ctrl.settings.presentationMode', value="'edit'") Edit
+                                            md-menu-item(type='radio', ng-model='ctrl.settings.presentationMode', value="'modifiable'") Modifiable
+                                md-menu-divider
+                                md-menu-item(type='checkbox', ng-model='ctrl.settings.showRuler') Show ruler
+                                md-menu-item(type='checkbox', ng-model='ctrl.settings.showEquationToolbar') Show equation toolbar
+                                md-menu-item(type='checkbox', ng-model='ctrl.settings.showSpellingSuggestions') Show spelling suggestions
+                                md-menu-divider
+                                md-menu-item(type='checkbox', ng-model='ctrl.settings.compactControls') Compact controls
+                                md-menu-item(type='checkbox', ng-model='ctrl.settings.fullScreen') Full screen
+                        md-menu
+                            button(ng-click='$mdOpenMenu()')
+                                | Format
+                            md-menu-content
+                                md-menu-item
+                                    md-button(ng-click="ctrl.sampleAction('bold', $event)")
+                                        | Bold
+                                        span.md-alt-text  {{ 'M-B' | keyboardShortcut }}
+                                md-menu-item
+                                    md-button(ng-click="ctrl.sampleAction('italic', $event)")
+                                        | Italic
+                                        span.md-alt-text {{ 'M-I' | keyboardShortcut }}
+                                md-menu-item
+                                    md-button(ng-click="ctrl.sampleAction('underline', $event)")
+                                        | Underline
+                                        span.md-alt-text {{ 'M-U' | keyboardShortcut }}
+                                md-menu-item
+                                    md-button(ng-click="ctrl.sampleAction('strikethrough', $event)")
+                                        | Strikethrough
+                                        span.md-alt-text {{ 'A-S-5' | keyboardShortcut }}
+                                md-menu-item
+                                    md-button(ng-click="ctrl.sampleAction('superscript', $event)")
+                                        | Superscript
+                                        span.md-alt-text {{ 'M-.' | keyboardShortcut }}
+                                md-menu-item
+                                    md-button(ng-click="ctrl.sampleAction('subscript', $event)")
+                                        | Subscript
+                                        span.md-alt-text {{ 'M-,' | keyboardShortcut }}
+                                md-menu-divider
+                                md-menu-item
+                                    md-button(ng-click="ctrl.toggleSetting('clearFormatting')") Clear Formatting
+
+
+                md-sidenav.md-sidenav-left(style="height:100vh;", md-component-id='left', md-disable-backdrop='', md-whiteframe='4')
+                    md-content(layout-margin='')
+                        md-button.md-accent(ng-click='toggleLeft()')
+                            | Close this Sidenav
+
+                md-content(flex='', layout-padding='')
+                    div(layout='column', layout-align='top center')
+                        md-button.md-raised(ng-click='toggleLeft()')
+                            | Toggle Sidenav
+
+                    div {{message}}
+
+    script(type='text/javascript', src='./bower_components/angular/angular.min.js')
+    script(type='text/javascript', src='./bower_components/angular-resource/angular-resource.min.js')
+    script(type='text/javascript', src='./bower_components/angular-animate/angular-animate.min.js')
+    script(type='text/javascript', src='./bower_components/angular-sanitize/angular-sanitize.min.js')
+    script(type='text/javascript', src='./bower_components/angular-messages/angular-messages.min.js')
+    script(type='text/javascript', src='./bower_components/angular-aria/angular-aria.min.js')
+    script(type='text/javascript', src='./bower_components/angular-i18n/angular-locale_ja-jp.js')
+    script(type='text/javascript', src='./bower_components/angular-material/angular-material.min.js')
+    script(type='text/javascript', src='./javascripts/application.js')
+    script(type='text/javascript', src='./javascripts/controller.js')
